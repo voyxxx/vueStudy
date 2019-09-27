@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="title">{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -40,7 +40,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+.title {
+  color:rgb(81, 248, 192);
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgb(255, 111, 111);
+  }
+}
+
 h3 {
   margin: 40px 0 0;
 }
